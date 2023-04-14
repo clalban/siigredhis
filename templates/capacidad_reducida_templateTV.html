@@ -1,0 +1,9 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the capacidad_reducida_init() hook (in hooks/capacidad_reducida.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="capacidad_reducida-VcrIdCap-<%%VALUE(VcrIdCap)%%>" class="capacidad_reducida-VcrIdCap"><%%SELECT%%><%%VALUE(VcrIdCap)%%><%%ENDSELECT%%></td>
+		<td id="capacidad_reducida-VcrCap-<%%VALUE(VcrIdCap)%%>" class="capacidad_reducida-VcrCap"><%%SELECT%%><%%VALUE(VcrCap)%%><%%ENDSELECT%%></td>

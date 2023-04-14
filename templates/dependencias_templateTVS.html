@@ -1,0 +1,10 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the dependencias_init() hook (in hooks/dependencias.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="dependencias-VcrId-<%%VALUE(VcrId)%%>" class="dependencias-VcrId text-right"><%%VALUE(VcrId)%%></td>
+		<td id="dependencias-VcrIdTra-<%%VALUE(VcrId)%%>" class="dependencias-VcrIdTra"><%%VALUE(VcrIdTra)%%></td>
+		<td id="dependencias-VcrTra-<%%VALUE(VcrId)%%>" class="dependencias-VcrTra"><%%VALUE(VcrTra)%%></td>

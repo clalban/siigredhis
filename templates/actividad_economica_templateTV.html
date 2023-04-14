@@ -1,0 +1,9 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the actividad_economica_init() hook (in hooks/actividad_economica.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="actividad_economica-VcrIdAct-<%%VALUE(VcrIdAct)%%>" class="actividad_economica-VcrIdAct"><%%SELECT%%><%%VALUE(VcrIdAct)%%><%%ENDSELECT%%></td>
+		<td id="actividad_economica-VcrActEco-<%%VALUE(VcrIdAct)%%>" class="actividad_economica-VcrActEco"><%%SELECT%%><%%VALUE(VcrActEco)%%><%%ENDSELECT%%></td>

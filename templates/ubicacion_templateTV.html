@@ -1,0 +1,10 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the ubicacion_init() hook (in hooks/ubicacion.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="ubicacion-VcrIdUbi-<%%VALUE(VcrIdUbi)%%>" class="ubicacion-VcrIdUbi text-right"><%%SELECT%%><%%VALUE(VcrIdUbi)%%><%%ENDSELECT%%></td>
+		<td id="ubicacion-VcrUbi-<%%VALUE(VcrIdUbi)%%>" class="ubicacion-VcrUbi"><%%SELECT%%><%%VALUE(VcrUbi)%%><%%ENDSELECT%%></td>
+		<td id="ubicacion-VcrDesUbi-<%%VALUE(VcrIdUbi)%%>" class="ubicacion-VcrDesUbi"><%%SELECT%%><%%VALUE(VcrDesUbi)%%><%%ENDSELECT%%></td>

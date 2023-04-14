@@ -1,0 +1,13 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the servidor_publico_init() hook (in hooks/servidor_publico.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="servidor_publico-VcrIdSerP-<%%VALUE(VcrIdSerP)%%>" class="servidor_publico-VcrIdSerP text-right"><%%SELECT%%><%%VALUE(VcrIdSerP)%%><%%ENDSELECT%%></td>
+		<td id="servidor_publico-VcrSerPub-<%%VALUE(VcrIdSerP)%%>" class="servidor_publico-VcrSerPub"><%%SELECT%%><%%VALUE(VcrSerPub)%%><%%ENDSELECT%%></td>
+		<td id="servidor_publico-VcrTipSerP-<%%VALUE(VcrIdSerP)%%>" class="servidor_publico-VcrTipSerP"><%%SELECT%%><%%VALUE(VcrTipSerP)%%><%%ENDSELECT%%></td>
+		<td id="servidor_publico-VcrIdProc-<%%VALUE(VcrIdSerP)%%>" class="servidor_publico-VcrIdProc text-right"><%%SELECT%%><%%VALUE(VcrIdProc)%%><%%ENDSELECT%%></td>
+		<td id="servidor_publico-VcrCelSerP-<%%VALUE(VcrIdSerP)%%>" class="servidor_publico-VcrCelSerP"><%%SELECT%%><%%VALUE(VcrCelSerP)%%><%%ENDSELECT%%></td>
+		<td id="servidor_publico-VcrCorrSerP-<%%VALUE(VcrIdSerP)%%>" class="servidor_publico-VcrCorrSerP"><a href="mailto:<%%VALUE(VcrCorrSerP)%%>"><%%VALUE(VcrCorrSerP)%%></a></td>

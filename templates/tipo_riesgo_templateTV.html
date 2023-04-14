@@ -1,0 +1,9 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the tipo_riesgo_init() hook (in hooks/tipo_riesgo.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="tipo_riesgo-VcrIdRie-<%%VALUE(VcrIdRie)%%>" class="tipo_riesgo-VcrIdRie text-right"><%%SELECT%%><%%VALUE(VcrIdRie)%%><%%ENDSELECT%%></td>
+		<td id="tipo_riesgo-VcrNomRie-<%%VALUE(VcrIdRie)%%>" class="tipo_riesgo-VcrNomRie"><%%SELECT%%><%%VALUE(VcrNomRie)%%><%%ENDSELECT%%></td>

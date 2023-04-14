@@ -1,0 +1,449 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: CONSECUTIVO: -->
+		<div class="form-group historico_vt-VcrCodHis" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">CONSECUTIVO:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrCodHis)%%></div>
+			</div>
+		</div>
+		<!-- Field: A&#209;O -->
+		<div class="form-group historico_vt-Vcrano" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">A&#209;O</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(Vcrano)%%></div>
+			</div>
+		</div>
+		<!-- Field: FUNCIONARIO / CONTRATISTA: -->
+		<div class="form-group historico_vt-VcrIdSerP" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">FUNCIONARIO / CONTRATISTA:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="VcrIdSerP<%%RND1%%>"><%%COMBOTEXT(VcrIdSerP)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: TIPO SOLICITUD: -->
+		<div class="form-group historico_vt-VcrIdSol" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">TIPO SOLICITUD:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="VcrIdSol<%%RND1%%>"><%%COMBOTEXT(VcrIdSol)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: No. RADICADO SOLICITUD: -->
+		<div class="form-group historico_vt-VcrRadSol" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">No. RADICADO SOLICITUD:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrRadSol)%%></div>
+			</div>
+		</div>
+		<!-- Field: FECHA SOLICITUD: -->
+		<div class="form-group historico_vt-VcrFecSol" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">FECHA SOLICITUD:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(VcrFecSol)%%></div>
+			</div>
+		</div>
+		<!-- Field: NUMERO RADICADO RESPUESTA -->
+		<div class="form-group historico_vt-VcrRadRes" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">NUMERO RADICADO RESPUESTA</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrRadRes)%%></div>
+			</div>
+		</div>
+		<!-- Field: FECHA RADICADO -->
+		<div class="form-group historico_vt-VcrFecRad" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">FECHA RADICADO</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(VcrFecRad)%%></div>
+			</div>
+		</div>
+		<!-- Field: DIAS HABILES RESPUESTA -->
+		<div class="form-group historico_vt-VcrDiaResp" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">DIAS HABILES RESPUESTA</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrDiaResp)%%></div>
+			</div>
+		</div>
+		<!-- Field: NIVEL DE RIESGO -->
+		<div class="form-group historico_vt-VcrIdRie" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">NIVEL DE RIESGO</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="VcrIdRie<%%RND1%%>"><%%COMBOTEXT(VcrIdRie)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: CIUDADANO O ENTIDAD SOLICITANTE -->
+		<div class="form-group historico_vt-VcrEntSol" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">CIUDADANO O ENTIDAD SOLICITANTE</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrEntSol)%%></div>
+			</div>
+		</div>
+		<!-- Field: NOMBRE PERSONA ATIENDE VISITA: -->
+		<div class="form-group historico_vt-VcrNomAti" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">NOMBRE PERSONA ATIENDE VISITA:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrNomAti)%%></div>
+			</div>
+		</div>
+		<!-- Field: N&#218;MERO IDENTIFICACI&#211;N: -->
+		<div class="form-group historico_vt-VcrNoIde" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">N&#218;MERO IDENTIFICACI&#211;N:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrNoIde)%%></div>
+			</div>
+		</div>
+		<!-- Field: CELULAR PERSONA QUE ATIENDE VISITA: -->
+		<div class="form-group historico_vt-VcrCel" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">CELULAR PERSONA QUE ATIENDE VISITA:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrCel)%%></div>
+			</div>
+		</div>
+		<!-- Field: CODIGO DEL FORMULARIO -->
+		<div class="form-group historico_vt-VcrCodForm" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">CODIGO DEL FORMULARIO</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrCodForm)%%></div>
+			</div>
+		</div>
+		<!-- Field: FECHA VISITA DE VERIFICACION -->
+		<div class="form-group historico_vt-VcrFecVis" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">FECHA VISITA DE VERIFICACION</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(VcrFecVis)%%></div>
+			</div>
+		</div>
+		<!-- Field: DIRECCION: -->
+		<div class="form-group historico_vt-VcrDir" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">DIRECCION:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrDir)%%></div>
+			</div>
+		</div>
+		<!-- Field: BARRIO: -->
+		<div class="form-group historico_vt-VcrIdBarVe" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">BARRIO:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="VcrIdBarVe<%%RND1%%>"><%%COMBOTEXT(VcrIdBarVe)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: COMUNA/LOCALIDAD: -->
+		<div class="form-group historico_vt-VcrIdCom" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">COMUNA/LOCALIDAD:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="VcrIdCom<%%RND1%%>"><%%COMBOTEXT(VcrIdCom)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: VEREDA/CORREGIMIENTO: -->
+		<div class="form-group historico_vt-VcrIdCorr" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">VEREDA/CORREGIMIENTO:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="VcrIdCorr<%%RND1%%>"><%%COMBOTEXT(VcrIdCorr)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: LONGITUD: -->
+		<div class="form-group historico_vt-VcrLon" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">LONGITUD:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrLon)%%></div>
+			</div>
+		</div>
+		<!-- Field: LATITUD: -->
+		<div class="form-group historico_vt-VcrLat" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">LATITUD:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrLat)%%></div>
+			</div>
+		</div>
+		<!-- Field: MOTIVO VISITA: -->
+		<div class="form-group historico_vt-VcrIdMot" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">MOTIVO VISITA:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="VcrIdMot<%%RND1%%>"><%%COMBOTEXT(VcrIdMot)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: TIPO DE FEN&#211;MENO: -->
+		<div class="form-group historico_vt-VcrIdFen" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">TIPO DE FEN&#211;MENO:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="VcrIdFen<%%RND1%%>"><%%COMBOTEXT(VcrIdFen)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: CARACTER&#205;STICAS DEL EVENTO: -->
+		<div class="form-group historico_vt-VcrIdCar" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">CARACTER&#205;STICAS DEL EVENTO:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="VcrIdCar<%%RND1%%>"><%%COMBOTEXT(VcrIdCar)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: AYUDA HUMANITARIA: -->
+		<div class="form-group historico_vt-VcrAyuHum" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">AYUDA HUMANITARIA:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(VcrAyuHum)%%></div>
+			</div>
+		</div>
+		<!-- Field: PERSONAS HERIDAS -->
+		<div class="form-group historico_vt-VcrPerHer" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">PERSONAS HERIDAS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(VcrPerHer)%%></div>
+			</div>
+		</div>
+		<!-- Field: PERSONAS FALLECIDAS -->
+		<div class="form-group historico_vt-VcrPerFall" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">PERSONAS FALLECIDAS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(VcrPerFall)%%></div>
+			</div>
+		</div>
+		<!-- Field: TRASLADO CASO: -->
+		<div class="form-group historico_vt-VcrTraCas" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">TRASLADO CASO:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(VcrTraCas)%%></div>
+			</div>
+		</div>
+		<!-- Field: COPIA: -->
+		<div class="form-group historico_vt-VcrCop" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">COPIA:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrCop)%%></div>
+			</div>
+		</div>
+		<!-- Field: ESTADO DEL TRAMITE: -->
+		<div class="form-group historico_vt-VcrEstTra" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ESTADO DEL TRAMITE:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrEstTra)%%></div>
+			</div>
+		</div>
+		<!-- Field: OBSERVACIONES: -->
+		<div class="form-group historico_vt-VcrObsHis" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OBSERVACIONES:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrObsHis)%%></div>
+			</div>
+		</div>
+		<!-- Field: UBICACION DE LA DOCUMENTACI&#211;N: -->
+		<div class="form-group historico_vt-VcrUbiInf" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">UBICACION DE LA DOCUMENTACI&#211;N:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrUbiInf)%%></div>
+			</div>
+		</div>
+		<!-- Field: RESPUESTA DEL INFORME: -->
+		<div class="form-group historico_vt-VcrResInf" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">RESPUESTA DEL INFORME:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrResInf)%%></div>
+			</div>
+		</div>
+		<!-- Field: TRASLADO A ORGANISMO O ENTIDAD No.1: -->
+		<div class="form-group historico_vt-VcrIdTra1" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">TRASLADO A ORGANISMO O ENTIDAD No.1:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="VcrIdTra1<%%RND1%%>"><%%COMBOTEXT(VcrIdTra1)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: NO. RADICADO DEL TRASLADO No. 1: -->
+		<div class="form-group historico_vt-VcrRadTra1" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">NO. RADICADO DEL TRASLADO No. 1:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrRadTra1)%%></div>
+			</div>
+		</div>
+		<!-- Field: FECHA DEL TRASLADO No. 1: -->
+		<div class="form-group historico_vt-VcrFecTra1" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">FECHA DEL TRASLADO No. 1:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(VcrFecTra1)%%></div>
+			</div>
+		</div>
+		<!-- Field: RESPUESTA DEL TRASLADO 1: -->
+		<div class="form-group historico_vt-VcrResTra1" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">RESPUESTA DEL TRASLADO 1:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrResTra1)%%></div>
+			</div>
+		</div>
+		<!-- Field: TRASLADO A ORGANISMO O ENTIDAD No.2: -->
+		<div class="form-group historico_vt-VcrIdTra2" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">TRASLADO A ORGANISMO O ENTIDAD No.2:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="VcrIdTra2<%%RND1%%>"><%%COMBOTEXT(VcrIdTra2)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: NO. RADICADO DEL TRASLADO No. 2: -->
+		<div class="form-group historico_vt-VcrRadTra2" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">NO. RADICADO DEL TRASLADO No. 2:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrRadTra2)%%></div>
+			</div>
+		</div>
+		<!-- Field: FECHA DEL TRASLADO No.2: -->
+		<div class="form-group historico_vt-VcrFecTra2" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">FECHA DEL TRASLADO No.2:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(VcrFecTra2)%%></div>
+			</div>
+		</div>
+		<!-- Field: RESPUESTA DEL TRASLADO 2: -->
+		<div class="form-group historico_vt-VcrResTra2" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">RESPUESTA DEL TRASLADO 2:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrResTra2)%%></div>
+			</div>
+		</div>
+		<!-- Field: TRASLADO A ORGANISMO O ENTIDAD No.3: -->
+		<div class="form-group historico_vt-VcrIdTra3" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">TRASLADO A ORGANISMO O ENTIDAD No.3:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="VcrIdTra3<%%RND1%%>"><%%COMBOTEXT(VcrIdTra3)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: NO. RADICADO DEL TRASLADO No. 3: -->
+		<div class="form-group historico_vt-VcrRadTra3" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">NO. RADICADO DEL TRASLADO No. 3:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrRadTra3)%%></div>
+			</div>
+		</div>
+		<!-- Field: FECHA DEL TRASLADO No.3: -->
+		<div class="form-group historico_vt-VcrFecTra3" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">FECHA DEL TRASLADO No.3:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(VcrFecTra3)%%></div>
+			</div>
+		</div>
+		<!-- Field: RESPUESTA DEL TRASLADO 3: -->
+		<div class="form-group historico_vt-VcrResTra3" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">RESPUESTA DEL TRASLADO 3:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrResTra3)%%></div>
+			</div>
+		</div>
+		<!-- Field: TRASLADO A ORGANISMO O ENTIDAD No.4: -->
+		<div class="form-group historico_vt-VcrIdTra4" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">TRASLADO A ORGANISMO O ENTIDAD No.4:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="VcrIdTra4<%%RND1%%>"><%%COMBOTEXT(VcrIdTra4)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: NO. RADICADO DEL TRASLADO No. 4: -->
+		<div class="form-group historico_vt-VcrRadTra4" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">NO. RADICADO DEL TRASLADO No. 4:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrRadTra4)%%></div>
+			</div>
+		</div>
+		<!-- Field: FECHA DEL TRASLADO No.4: -->
+		<div class="form-group historico_vt-VcrFecTra4" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">FECHA DEL TRASLADO No.4:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(VcrFecTra4)%%></div>
+			</div>
+		</div>
+		<!-- Field: RESPUESTA DEL TRASLADO 4: -->
+		<div class="form-group historico_vt-VcrResTra4" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">RESPUESTA DEL TRASLADO 4:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrResTra4)%%></div>
+			</div>
+		</div>
+		<!-- Field: TRASLADO A ORGANISMO O ENTIDAD No.5: -->
+		<div class="form-group historico_vt-VcrIdTra5" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">TRASLADO A ORGANISMO O ENTIDAD No.5:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="VcrIdTra5<%%RND1%%>"><%%COMBOTEXT(VcrIdTra5)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: NO. RADICADO DEL TRASLADO No.5: -->
+		<div class="form-group historico_vt-VcrRadTra5" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">NO. RADICADO DEL TRASLADO No.5:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrRadTra5)%%></div>
+			</div>
+		</div>
+		<!-- Field: FECHA DEL TRASLADO No.5: -->
+		<div class="form-group historico_vt-VcrFecTra5" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">FECHA DEL TRASLADO No.5:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(VcrFecTra5)%%></div>
+			</div>
+		</div>
+		<!-- Field: RESPUESTA DEL TRASLADO 5: -->
+		<div class="form-group historico_vt-VcrResTra5" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">RESPUESTA DEL TRASLADO 5:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrResTra5)%%></div>
+			</div>
+		</div>
+		<!-- Field: TRASLADO A ORGANISMO O ENTIDAD No.6: -->
+		<div class="form-group historico_vt-VcrIdTra6" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">TRASLADO A ORGANISMO O ENTIDAD No.6:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="VcrIdTra6<%%RND1%%>"><%%COMBOTEXT(VcrIdTra6)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: NO. RADICADO DEL TRASLADO No.6: -->
+		<div class="form-group historico_vt-VcrRadTra6" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">NO. RADICADO DEL TRASLADO No.6:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrRadTra6)%%></div>
+			</div>
+		</div>
+		<!-- Field: TRASLADO A ORGANISMO O ENTIDAD No.7: -->
+		<div class="form-group historico_vt-VcrIdTra7" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">TRASLADO A ORGANISMO O ENTIDAD No.7:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="VcrIdTra7<%%RND1%%>"><%%COMBOTEXT(VcrIdTra7)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: NO. RADICADO DEL TRASLADO No.7: -->
+		<div class="form-group historico_vt-VcrRadTra7" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">NO. RADICADO DEL TRASLADO No.7:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrRadTra7)%%></div>
+			</div>
+		</div>
+		<!-- Field: TRASLADO A ORGANISMO O ENTIDAD No.8: -->
+		<div class="form-group historico_vt-VcrIdTra8" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">TRASLADO A ORGANISMO O ENTIDAD No.8:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="VcrIdTra8<%%RND1%%>"><%%COMBOTEXT(VcrIdTra8)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: NO. RADICADO DEL TRASLADO No.8: -->
+		<div class="form-group historico_vt-VcrRadTra8" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">NO. RADICADO DEL TRASLADO No.8:</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(VcrRadTra8)%%></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<script>
+	$j(function() {
+		// render read-only checkboxes in DVP
+		$j('form input[type=checkbox]:not(.hidden):checked')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-check"></i>');
+		$j('form input[type=checkbox]:not(.hidden):not(:checked)')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-unchecked"></i>')
+	})
+</script>

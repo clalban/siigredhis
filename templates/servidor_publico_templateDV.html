@@ -1,0 +1,280 @@
+<!-- To change the layout of the detail view form, we recommend using JS code in hooks/servidor_publico-dv.js rather than editing this file -->
+
+<div id="detail-view"></div>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div id="servidor_publico_dv_container-loading" class="text-center text-info text-bold vspacer-lg"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+
+<div class="panel-body hidden" id="servidor_publico_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12 children-links">
+			<input type="hidden" id="historico_vt_hclink" value="historico_vt_view.php?filterer_VcrIdSerP=<%%URLVALUE(VcrIdSerP)%%>&<%%EMBEDDED%%>">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<hr class="hidden-xs hidden-sm">
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="servidor_publico_dv_form">
+			<fieldset class="form-horizontal">
+
+				<!-- Field: DOCUMENTO IDENTIDAD SERVIDOR PUBLICO -->
+				<div class="form-group servidor_publico-VcrIdSerP">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="VcrIdSerP">DOCUMENTO IDENTIDAD SERVIDOR PUBLICO</label>
+					<div class="col-lg-9">
+						<input type="text" class="form-control" name="VcrIdSerP" id="VcrIdSerP" value="<%%VALUE(VcrIdSerP)%%>" required><div class="text-danger vspacer-md" id="VcrIdSerP-uniqueness-note" style="display: none;"><%%TRANSLATION(unique field error)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: NOMBRE SERVIDOR PUBLICO -->
+				<div class="form-group servidor_publico-VcrSerPub">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="VcrSerPub">NOMBRE SERVIDOR PUBLICO <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#VcrSerPub-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="VcrSerPub-description"><div class="alert alert-info bspacer-xs">Nombres y apellidos servidor p&#250;blico</div></span>
+						<input maxlength="70" type="text" class="form-control" name="VcrSerPub" id="VcrSerPub" value="<%%VALUE(VcrSerPub)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Tipo servidor p&#250;blico -->
+				<div class="form-group servidor_publico-VcrTipSerP">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="VcrTipSerP">Tipo servidor p&#250;blico <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#VcrTipSerP-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="VcrTipSerP-description"><div class="alert alert-info bspacer-xs">Seleccione el tipo de servidor p&#250;blico</div></span>
+						<%%COMBO(VcrTipSerP)%%>
+					</div>
+				</div>
+
+				<!-- Field: Proceso asociado -->
+				<div class="form-group servidor_publico-VcrIdProc">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="VcrIdProc" data-parent_link="view_parent_modal">Proceso asociado <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#VcrIdProc-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="VcrIdProc-description"><div class="alert alert-info bspacer-xs">Seleccione el proceso al cual esta asociado el servidor p&#250;blico</div></span>
+						<div class="lookup-flex"><%%COMBO(VcrIdProc)%%><%%PLINK(VcrIdProc)%%><%%ADDNEW(procesos)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Celular servidor p&#250;blico -->
+				<div class="form-group servidor_publico-VcrCelSerP">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="VcrCelSerP">Celular servidor p&#250;blico <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#VcrCelSerP-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="VcrCelSerP-description"><div class="alert alert-info bspacer-xs">Registre el celular del servidor p&#250;blico</div></span>
+						<input maxlength="40" type="text" class="form-control" name="VcrCelSerP" id="VcrCelSerP" value="<%%VALUE(VcrCelSerP)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Correo Electr&#243;nico -->
+				<div class="form-group servidor_publico-VcrCorrSerP">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="VcrCorrSerP-edit-link">Correo Electr&#243;nico <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#VcrCorrSerP-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="VcrCorrSerP-description"><div class="alert alert-info bspacer-xs">Ingrese el correo electr&#243;nico del servidor p&#250;blico</div></span>
+						<div>
+							<a id="VcrCorrSerP-link" href="mailto:<%%VALUE(VcrCorrSerP)%%>" target="_blank" class="rspacer-lg"><%%VALUE(VcrCorrSerP)%%></a>
+							<label for="VcrCorrSerP"><button type="button" id="VcrCorrSerP-edit-link" class="btn btn-default vspacer-sm" data-toggle="collapse" data-target="#VcrCorrSerP" title="<%%TRANSLATION(Edit)%%>"><i class="glyphicon glyphicon-pencil"></i></button></label>
+							<input maxlength="40" type="text" class="form-control collapse" name="VcrCorrSerP" id="VcrCorrSerP" value="<%%VALUE(VcrCorrSerP)%%>">
+						</div><script>jQuery(function() { var e_VcrCorrSerP = '<%%VALUE(VcrCorrSerP)%%>'; if(e_VcrCorrSerP == '' || e_VcrCorrSerP == '&nbsp;' || e_VcrCorrSerP == 'blank.gif') jQuery('#VcrCorrSerP-link').hide(); });</script>
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2" id="servidor_publico_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- child records -->
+	<hr>
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			<div id="servidor_publico-children" class="children-tabs">
+				<div class="text-center"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+			</div>
+		</div>
+	</div>
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode) {
+				setTimeout(AppGini.closeParentModal, 2000);
+			}
+
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+			$j('#servidor_publico_dv_container-loading').addClass('hidden');
+			$j('#servidor_publico_dv_container').removeClass('hidden');
+			if(!$j('.table_view').length || $j('[name=SelectedID]').val().length) AppGini.focusFormElement('servidor_publico', 'VcrIdSerP');
+
+			$j('form').eq(0).change(function() {
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			$j('a[href="<%%BASE_UPLOAD_PATH%%>"]').click(function() { return false; });
+
+			if(embedded_mode) {
+				/* hide links to children tables in embedded mode */
+				$j('.detail_view a[id$=_link]').remove();
+
+				/* append embedded mode to all links */
+				var append_embedded = function() {
+					$j('a[href]:not([href^="#"]):not([href^="javascript"]):not([href$="Embedded=1"]):not([href*="link.php?t="]):not([href^="mailto:"]):not([href$=".jpg"]):not([href$=".png"]):not([href$=".gif"])').each(
+						function() {
+							$j(this).attr('href', $j(this).attr('href') + '&Embedded=1');
+						}
+					);
+				}
+				setTimeout(append_embedded, 500);
+				setTimeout(append_embedded, 1500);
+				setTimeout(append_embedded, 2500);
+				setTimeout(append_embedded, 3500);
+			}
+
+			/* when no record is selected ('add new' mode) */
+			if(add_new_mode) {
+				/* hide links to children tables */
+				$j('.detail_view a[id$=_link]').remove();
+			} else {
+				post(
+					'parent-children.php', {
+						ParentTable: 'servidor_publico',
+						SelectedID: '<%%VALUE(VcrIdSerP)%%>',
+						Operation: 'show-children'
+					},
+					'servidor_publico-children'
+				);
+			}
+
+			if(true /* !embedded_mode */) {
+				$j('.add_new_parent').click(function() {
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function() {
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.removeItem(pt + '_last_added_id');
+							AppGini.lookupText({
+								id: new_id,
+								table: 'servidor_publico',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			AppGini.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function() {
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length) {
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				} else {
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length) {
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != '') {
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link) {
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function() {
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+									// in case the parent record was updated, we should update auto-fills
+									var updaterName = field_id + '_update_autofills';
+									if(typeof(window[updaterName]) == 'function')
+										window[updaterName]();
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+			enforce_uniqueness('servidor_publico', 'VcrIdSerP');
+
+			/* load admin tools for admin user */
+			if(!add_new_mode) {
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=servidor_publico&id=<%%URLVALUE(VcrIdSerP)%%>',
+					function(resp) {
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=servidor_publico&id=<%%URLVALUE(VcrIdSerP)%%>');
+					}
+				);
+			}
+
+			/* warn user if 'add new' clicked while unsaved changes exist */
+			$j('#addNew').click(function() {
+				if($j('#deselect.btn-warning').length) {
+					return confirm('<%%TRANSLATION(discard changes confirm)%%>');
+				}
+			});
+
+		});
+	</script>
