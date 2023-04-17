@@ -1259,14 +1259,14 @@
 						],
 					],
 					'VcrLon' => [
-						'appgini' => "DECIMAL(10,5) NULL",
+						'appgini' => "VARCHAR(12) NULL",
 						'info' => [
 							'caption' => 'LONGITUD:',
 							'description' => 'Registrar coordenadas - longitud lo m&#225;s exacto posible en grados decimales donde sucedi&#243; la emergencia.   . Ejemplo:w (longitud) <br>&#8211; 76. (registrar la cantidad de n&#250;meros que apliquen)',
 						],
 					],
 					'VcrLat' => [
-						'appgini' => "DECIMAL(10,5) NULL",
+						'appgini' => "VARCHAR(12) NULL",
 						'info' => [
 							'caption' => 'LATITUD:',
 							'description' => 'Registrar las coordenadas - latitud lo m&#225;s exacto posible en grados decimales del lugar donde sucedi&#243; la emergencia.   <br>',

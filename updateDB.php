@@ -34,8 +34,8 @@
 				`VcrIdBarVe` VARCHAR(10) NULL,
 				`VcrIdCom` VARCHAR(12) NULL,
 				`VcrIdCorr` VARCHAR(12) NULL,
-				`VcrLon` DECIMAL(10,5) NULL,
-				`VcrLat` DECIMAL(10,5) NULL,
+				`VcrLon` VARCHAR(12) NULL,
+				`VcrLat` VARCHAR(12) NULL,
 				`VcrIdMot` VARCHAR(12) NOT NULL,
 				`VcrIdFen` VARCHAR(12) NOT NULL,
 				`VcrIdCar` VARCHAR(12) NOT NULL,
@@ -74,7 +74,12 @@
 				`VcrRadTra7` VARCHAR(30) NULL,
 				`VcrIdTra8` INT UNSIGNED NULL,
 				`VcrRadTra8` VARCHAR(30) NULL
-			) CHARSET utf8mb4"
+			) CHARSET utf8mb4", [
+				" ALTER TABLE `historico_vt` CHANGE `VcrLon` `VcrLon` VARCHAR(40) NULL ",
+				" ALTER TABLE `historico_vt` CHANGE `VcrLon` `VcrLon` VARCHAR(12) NULL ",
+				" ALTER TABLE `historico_vt` CHANGE `VcrLat` `VcrLat` VARCHAR(40) NULL ",
+				" ALTER TABLE `historico_vt` CHANGE `VcrLat` `VcrLat` VARCHAR(12) NULL ",
+			]
 		);
 		setupIndexes('historico_vt', ['VcrIdSerP','VcrIdSol','VcrIdRie','VcrIdBarVe','VcrIdCom','VcrIdCorr','VcrIdMot','VcrIdFen','VcrIdCar','VcrIdTra1','VcrIdTra2','VcrIdTra3','VcrIdTra4','VcrIdTra5','VcrIdTra6','VcrIdTra7','VcrIdTra8',]);
 
